@@ -16,6 +16,7 @@ Playing around with Helm in Minikube
 ```shell
 helm install --debug --dry-run ./mychart
 helm install ./mychart
+helm install ./mychart --set config.b=14
 helm upgrade <release-name> ./mychart
 helm ls
 helm get manifest <release-name>

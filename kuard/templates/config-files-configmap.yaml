@@ -3,7 +3,10 @@ kind: ConfigMap
 metadata:
   name: {{ .Release.Name }}-config-files
 data:
-  string-literal.json: '{"a": "A", "b": "B", "c": {"nested": "C"}}'
+  formatted-string.txt: |
+    value 'a' is set to '{{ .Values.config.a }}'
+    value 'b' is set to '{{ .Values.config.b }}'
+    value 'c.nested' is set to '{{ .Values.config.c.nested }}'
   values.yaml: |
 {{ .Values.config | toYaml | indent 4 }}
   values.json: |
