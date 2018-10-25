@@ -1,0 +1,13 @@
+You have successfully deployed this Helm chart for kuard with the release name '{{ .Release.Name }}'!
+
+See the k8s resources with:
+
+  helm get manifest {{ .Release.Name }}
+
+Upgrade the release with:
+
+  helm upgrade {{ .Release.Name }} ./kuard
+
+Delete the release with:
+
+  helm delete {{ .Release.Name }}

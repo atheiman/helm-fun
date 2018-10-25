@@ -1,0 +1,6 @@
+podReplicas: 1
+config:
+  a: A
+  b: B
+  c:
+    nested: C
